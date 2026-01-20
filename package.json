@@ -1,0 +1,28 @@
+{
+  "name": "github-issues-viewer",
+  "version": "1.0.0",
+  "description": "View and export GitHub issues and pull requests",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/watch.js",
+    "deploy": "npm run build && node scripts/wrangler.js deploy",
+    "build": "node build.js",
+    "api:tail": "node scripts/wrangler.js tail",
+    "kv:create": "node scripts/wrangler.js kv namespace create SESSIONS",
+    "kv:create:preview": "node scripts/wrangler.js kv namespace create SESSIONS --preview",
+    "secret:put": "node scripts/wrangler.js secret put"
+  },
+  "dependencies": {
+    "hono": "^4.11.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "wrangler": "^4.59.3"
+  },
+  "overrides": {
+    "sharp": "npm:noop-package@^1.0.0"
+  }
+}

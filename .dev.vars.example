@@ -1,0 +1,11 @@
+# Copy this file to .dev.vars for local development
+# DO NOT commit .dev.vars to git
+
+GITHUB_CLIENT_ID=your_github_client_id_here
+GITHUB_CLIENT_SECRET=your_github_client_secret_here
+SESSION_SECRET=generate_a_random_32_character_string_here
+
+# Choose from a random string from: https://www.random.org/strings/?num=10&len=32&digits=on&upperalpha=on&loweralpha=on&unique=on&format=html
+
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id_here
+CLOUDFLARE_API_TOKEN=your_cloudflare_api_token_here

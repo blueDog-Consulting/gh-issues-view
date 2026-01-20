@@ -1,0 +1,24 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "github-issues-viewer",
+	"main": "dist/worker.js",
+	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_date": "2026-01-20",
+	"kv_namespaces": [
+		{
+			"binding": "SESSIONS",
+			"id": "26de60c63e97458ca99ffe3c2df1abed"
+		}
+	],
+	"vars": {
+		"ENVIRONMENT": "development"
+	},
+	"routes": [
+		{
+			"pattern": "github-viewer.bluedog.dev",
+			"custom_domain": true
+		}
+	]
+	// Secrets are loaded from .dev.vars for local development
+	// For production, set via: npm run secret:put GITHUB_CLIENT_ID
+}
